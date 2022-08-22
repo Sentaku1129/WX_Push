@@ -9,8 +9,8 @@ import random
 today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
-zxx_birthday = os.environ['ZXX_BIRTHDAY']
-wxh_birthday = os.environ['WXH_BIRTHDAY']
+zxx_birthday = os.environ["ZXX_BIRTHDAY"]
+wxh_birthday = os.environ["WXH_BIRTHDAY"]
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
