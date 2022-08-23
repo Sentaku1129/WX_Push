@@ -7,13 +7,13 @@ on:
 jobs:
   send_message:
     runs-on: ubuntu-latest
-    name: send morning to your girlfriend
+    name: send afternoon to your girlfriend
 
     steps:
     - name: checkout
       uses: actions/checkout@v3
       with:
-        ref: master
+        ref: master/good_afternoon.py
 
     - name: sender
       uses: actions/setup-python@v2
