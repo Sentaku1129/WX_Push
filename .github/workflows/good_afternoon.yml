@@ -13,14 +13,14 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
       with:
-        ref: master/good_afternoon.py
+        ref: master
 
     - name: sender
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
         architecture: 'x64'
-    - run: pip install -r ./requirements.txt && python ./main.py
+    - run: pip install -r ./requirements.txt && python ./good_afternoon.py
 
     env:
       APP_ID: ${{ secrets.APP_ID }}
