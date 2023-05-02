@@ -21,10 +21,10 @@ template_id = os.environ["TEMPLATE_MORNING_ID"]
 
 
 def get_weather():
-  url = "https://restapi.amap.com/v3/weather/weatherInfo?city=" + city + "110101&key=94cd60b51a472c25d32d9329b3d46f76"
+  url = "https://restapi.amap.com/v3/weather/weatherInfo?city=" + city + "&key=94cd60b51a472c25d32d9329b3d46f76"
 #   url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&ext=&cityid=&city=" + city
   res = requests.get(url).json()
-  weather= {'weather' : res['data'][0]['wea'],'temp':res['data'][0]['tem']}
+  weather= {'weather' : res['lives']['weather'],'temp':res['lives']['temperature']}
   return weather['weather'], weather['temp']
 
 def get_count():
